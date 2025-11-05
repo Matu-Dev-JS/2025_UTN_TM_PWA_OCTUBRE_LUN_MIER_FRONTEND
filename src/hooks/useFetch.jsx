@@ -10,6 +10,7 @@ const useFetch = () => {
         setLoading(true)
         try{
             const response = await requestCallback()
+
             if(!response.ok){
                 throw new Error(response.message || 'Error desconocido')
             }
